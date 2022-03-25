@@ -8,6 +8,8 @@
 }
 
 .book img{
+    width: 200px;
+    height: 272px;
     border-radius: 10px;
     margin: 12px 45px;
     margin-bottom: 0px;
@@ -32,4 +34,6 @@
 .btn-cart:hover{
     background-color: aqua;
     cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
 }
