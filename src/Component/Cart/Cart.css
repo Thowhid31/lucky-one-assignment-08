@@ -1,0 +1,18 @@
+.btn-cart-section{
+    color: white;
+    width: 75%;
+    height: 50px;
+    background-color:blue;
+    border: none;
+    border-radius: 15px;
+    margin: 5px;
+    cursor: pointer;
+    
+}
+
+.cart-div{
+    margin: 100px;
+    position: sticky;
+    top: 0;
+    
+}

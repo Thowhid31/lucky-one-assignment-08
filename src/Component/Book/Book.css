@@ -1,0 +1,35 @@
+.book{
+    width: 300px;
+    height: 500px;
+    border: 2px solid gray;
+    border-radius: 15px;
+    margin: 10px;
+    position: relative;
+}
+
+.book img{
+    border-radius: 10px;
+    margin: 12px 45px;
+    margin-bottom: 0px;
+    align-items: center;
+}
+
+.book-info{
+    margin-top: 10px;
+    padding: 2px;
+    margin-left: 10px;
+}
+
+.btn-cart{
+    width: 100%;
+    background-color: aquamarine;
+    border: none;
+    border-radius: 0px 0px 15px 15px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.btn-cart:hover{
+    background-color: aqua;
+    cursor: pointer;
+}
