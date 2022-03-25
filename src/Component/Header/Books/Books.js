@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Book from '../../Book/Book';
 import Cart from '../../Cart/Cart';
 import './Books.css'
@@ -17,17 +17,30 @@ const Books = () => {
         { id: 10, name: 'Wimpy Kid V-10', img: 'https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9780/1413/9780141377094.jpg', price: "$109" },
         { id: 11, name: 'Wimpy Kid V-11', img: 'https://i5.walmartimages.com/asr/289fc334-0f01-4b3b-bbe5-98307fb7e291.0991dbfacb8969a2b0ce3605e36fba4c.jpeg', price: "$110" }
     ]
+    const [cart, setCart] = useState([])
+
+    const handleAddToCart = (book) => {
+        
+        const newCart = [...cart, book]
+        setCart(newCart);
+    }
+
     return (
         <div>
             <div className='books-container'>
                 <div className='onebook-container'>
                     {
                         books.map(book => <Book key={book.id}
-                            book={book}></Book>)
+                            
+                            book={book}
+                            handleAddToCart={handleAddToCart}
+                            ></Book>)
                     }
                 </div>
                 <div className='cart-container'>
-                    <Cart></Cart>
+                    
+                    {cart.map(book => <h3 className='h3-for-cart' key={book.id}>{book.name}</h3>)}
+                    <Cart cart={cart}></Cart>
                 </div>
             </div>
         </div>

@@ -14,6 +14,12 @@
     background-color: aqua;
 }
 
+.h3-for-cart{
+    margin: 20px;
+    position: static;
+    top:inherit;
+}
+
 @media screen and (max-width: 760px) {
     .onebook-container{
         grid-template-columns: repeat(1, 1fr);

@@ -4,17 +4,20 @@ import React from 'react';
 import './Book.css'
 
 const Book = (props) => {
+    const {book, handleAddToCart} = props
     const {name, img, price} = props.book;
+    
+    // console.log(props);
     return (
         <div className='book'>
             <div >
-                <img src={img} alt="" srcset="" />
+                <img src={img} alt=""/>
                 <div className='book-info'>
                 <h3>{name}</h3>
                 <p>Only for: {price}</p>
                 </div>
             </div>
-            <button className='btn-cart'><p>Add To Cart <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon> </p>
+            <button onClick={() => handleAddToCart(book)} className='btn-cart'><p>Add To Cart <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon> </p>
             </button>
             <div>
                 
