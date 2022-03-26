@@ -10,11 +10,11 @@ const Quesions = () => {
             </div>
             <div>
                 <h3>Que-02: Props vs State</h3>
-                <p>Ans:</p>
+                <p>Ans: First of all Props are read-only. On the other hand Sate is read and write also. In Props, Data is passed from one component to another component. But in State, Data is passed within the component only. Props can't be modified so, it immutable; State can be modified so, it is mutable. Props can be used with functional component and state also. There, State can be used only with the state component.</p>
             </div>
             <div>
                 <h3>How useState Works?</h3>
-                <p>Ans: </p>
+                <p>Ans: useState is a HOOK that approve us to have state variables in functional components. And it allows us declare one or more state variable in function components. Basically, react keeps track of these state variables and ensures they stay up-to-date on subsequent re-renders of the component. If I pass the initial state to this function and it returns me a variable with the current state value and another function to update this value.</p>
             </div>
         </div>
     );
