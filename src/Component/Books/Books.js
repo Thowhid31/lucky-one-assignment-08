@@ -18,33 +18,27 @@ const Books = () => {
         { id: 11, name: 'Wimpy Kid V-11', img: 'https://i5.walmartimages.com/asr/289fc334-0f01-4b3b-bbe5-98307fb7e291.0991dbfacb8969a2b0ce3605e36fba4c.jpeg', price: "$110" }
     ]
     const [cart, setCart] = useState([])
-    const [choose, setChoose] = useState([])
-    // const [again, setAgain] = useState([])
-
-    // const againHandler = () => {
-    //     const newAgain = [...again]
-    //     setAgain(newAgain)
-    // }
-
-
-    const handleAddToCart = (book) => {
-        
+    
+    const handleAddToCart = (book) => {      
         const newCart = [...cart, book]
         setCart(newCart);
-
         console.log(book);
     }
 
-    const handleChooseForMe = (books) => {
-        const showOneForMe = Math.random() * choose.length
-        setChoose(showOneForMe)
-        
+    const handleChooseAgain = () => {
+        setCart([])
     }
-
-    
-
-
-
+    const handleChooseForMe=()=>{
+        if(cart.length === 0){
+            alert('Please add item to get One')
+        }
+        
+        else{
+            const newCart=[...cart]
+            const randomCart=Math.floor(Math.random()*newCart.length);
+            alert('Your Random product is:' +newCart[randomCart].name)
+        }
+    }
     return (
         <div>
             <div className='books-container'>
@@ -62,11 +56,8 @@ const Books = () => {
                         cart.map(book => <h3 className='h3-for-cart' key={book.id}><li>{book.name}
                         </li></h3>)
                     }
-                    {
-                        choose.map(book => <h2 className='h3-for-cart' key={book.id} handleChooseForMe={handleChooseForMe}> It's for Your: {book.name}</h2>)
-                    }
                     
-                    <Cart cart={cart}></Cart>
+                    <Cart handleChooseForMe={handleChooseForMe} handleChooseAgain={handleChooseAgain}></Cart>
                 </div>
             </div>
         </div>

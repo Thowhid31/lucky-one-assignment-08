@@ -20,6 +20,7 @@
     top:inherit;
 }
 
+
 @media screen and (max-width: 760px) {
     .onebook-container{
         grid-template-columns: repeat(1, 1fr);
