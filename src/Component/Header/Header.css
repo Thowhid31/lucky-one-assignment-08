@@ -2,8 +2,14 @@
     color: brown;
     background-color: aquamarine;
     text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .h4{
     color: blue;
+}
+
+.header-head{
+    font-size: 48px;
 }

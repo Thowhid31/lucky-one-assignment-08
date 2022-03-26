@@ -3,10 +3,12 @@ import './Header.css'
 
 const Header = () => {
     return (
-        <div className='header'>
-            <h1>Select your Wimpy Kid</h1>
+        <nav className='header'>
+            <div>
+            <h1 className='header-head'>Select your Wimpy Kid</h1>
             <h4 className='h4'>From our Collections</h4>
         </div>
+        </nav>
     );
 };
 
