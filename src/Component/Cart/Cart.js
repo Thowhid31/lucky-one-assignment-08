@@ -7,7 +7,7 @@ const Cart = ({handleChooseForMe, handleChooseAgain}) => {
         <div className='cart-div'>
             <div>
             <button onClick={handleChooseForMe} className='btn-cart-section'>Choose For Me</button><br></br>
-            <button onClick={handleChooseAgain} className='btn-cart-section'>Choose Again</button>
+            <button onClick={handleChooseAgain} className='btn-cart-section'>Choose Again (Clear)</button>
             </div>
         </div>
     );

@@ -56,7 +56,7 @@ const Books = () => {
                         cart.map(book => <h3 className='h3-for-cart' key={book.id}><li>{book.name}
                         </li></h3>)
                     }
-                    
+                                       
                     <Cart handleChooseForMe={handleChooseForMe} handleChooseAgain={handleChooseAgain}></Cart>
                 </div>
             </div>
